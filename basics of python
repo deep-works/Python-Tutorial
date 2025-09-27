@@ -1,0 +1,408 @@
+'''basic syntax of python'''
+print("Hello world")
+#output: Hello world
+
+
+# use for single line comment
+''' use for multi
+line comments '''
+
+
+'''in Python language; Captital letter and Small letter not same.
+    'A' and 'a' are different. '''
+
+'''built-in format() function'''
+cal = float(16/(float(3)))
+print(cal)
+#output: 5.333333333333333
+cal = format(float(16/(float(3))), '.2f')
+print(cal)
+#output: 5.33
+
+
+a = 78//5
+print(a)
+#output: 15
+b = 78%5
+print(b)
+#output: 3
+a =  54.58//10.0
+print(a)
+#output: 5.0
+b = 78.0%5.0
+print(b)
+#output: 3.0
+b = 78.2%5.0
+print(b)
+#output: 3.200000000000003
+
+
+print('Beautiful Weather' '...' 'I like it')
+#output: Beautiful Weather...I like it
+
+print('What's your name?')
+#SyntaxError: unterminated string literal
+
+print('What\'s your name?')
+#output: What's your name?
+
+print("Hey \"D\"")
+#output: Hey "D"
+
+print("Hey \tD")
+#output: Hey 	D
+
+print("\\")
+#output: \
+
+print("\'")
+#output: '
+
+print("\"")
+#output: "
+
+print('HEllo', format('-',  '-<10'), 'World')
+#output: HEllo ---------- World
+
+
+'''Strings Slicing: Strings Operations'''
+str = 'Python is open source'
+print(str) #output: Python is open source
+print(str[0]) #output: P
+print(str[0:4]) #output: Pyth
+print(str[0:]) #output: Python is open source
+print(str[-1]) #output: e
+print(str[-4]) #output: u
+print(str[:5]) #output: Pytho
+print(str * 2) #output: Python is open sourcePython is open source
+print(str + "language") #output: Python is open sourcelanguage
+
+
+num = 16
+float_num = 123.66
+ch =  'Z'
+str = "Zoho"
+print(num) #output: 16
+print(float_num) #output: 123.66
+print(ch) #output: z
+print(str) #output: Zoho
+
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print(name + ", you are "+ age + " years old.")
+# Enter your name: Deep
+# Enter your age: 21
+#output:  Deep, you are 21 years old.
+
+
+
+'''Comaparison Operator'''
+# + , -, *, / , % , // , **
+
+'''Arithmetic Operator'''
+# == , != , > , < , >= , <=
+
+a = 10
+b = 11
+print(a==b) #output: False
+print(a!=b) #output: True
+print(a>b) #output: False
+print(a<b) #output: True
+
+
+'''Assignment Operator'''
+# a += b ---> a = a + b; a -= b ---> a = a - b;
+# a*=b ---> a*b; a/=b ---> a/b;
+# a%=b ---> a%b; a//=b ---> a//b; a**=b ---> a**b;
+
+
+str = 'Hello'
+print(str + '4') #output: Hello4
+print(str * 4) #output: HelloHelloHelloHello
+
+
+'''Tuple'''
+tup = ('a', 'bc', 78, 12.34)
+tup2 = ('d', 78)
+print(tup) #output: ('a', 'bc', 78, 12.34)
+print(tup[0]) #output: a
+# print(tup[1:3]) #output: ('bc', 78)
+print(tup[-1]) #output: 12.34
+print(tup*2) #output: ('a', 'bc', 78, 12.34, 'a', 'bc', 78, 12.34)
+print(tup + tup2) #output: ('a', 'bc', 78, 12.34, 'd', 78)
+print(tup2 + tup) #output: ('d', 78, 'a', 'bc', 78, 12.34)
+
+
+
+'''Dictionary'''
+dict = {"Item" : "Chocolate", "Price" : 100}
+print(dict) #output: {'Item': 'Chocolate', 'Price': 100}
+print(dict["Item"]) #output: Chocolate
+print(dict["Price"])  #output: 100
+
+
+'''Without converting the datatype of the input numbers'''
+x = input("Enter number 1: ")
+y = input("Enter number 2: ")
+print(x+y)
+# Enter number 1: 10
+# Enter number 2: 13
+#output: 1013
+
+
+'''Using int for datatype conversion of the input numbers'''
+x = int(input("Enter number 1: "))
+y = int(input("Enter number 2: "))
+print(x+y)
+# Enter number 1: 10
+# Enter number 1: 13
+#output: 23
+
+
+
+'''Functions for Type Conversions'''
+# int(x) ---> Converts x to an integer
+# float(x) ---> Converts x to an floating point number
+# long(x) ---> Converts x to a long integer
+# str(x) ---> Converts x to a string
+# tuple(x) ---> Converts x to a tuple
+# list(x) ---> Converts x to a list
+# set(x) ---> Converts x to a set
+# chr(x) ---> Converts x to a character
+
+
+
+
+
+# SOME CODING PROBLEMS
+
+
+# Write a program to enter a number and display its hex and octal equivalent and its square root.
+num = int(input("Enter the number: "))
+print("Hexadecimal of " + str(num) + " : " + str(hex(num)))
+print("Octal of " + str(num) + " : " + str(oct(num)))
+print("Square root of " + str(num) + " : " + str(num ** 0.5))
+#output:
+#Enter the number: 21
+#  Hexadecimal of 21 : 0x15
+#  Octal of 21 : 0o25
+#  Square root of 21 : 4.58257569495584
+
+
+
+# Write a program to read and print values of variables of different data types.
+num = int(input("Enter the value of num: "))
+amt = float(input("Enter the value of amt: "))
+pi = float(input("Enter the value of pi: "))
+code = str(input("Enter the value of code: "))
+population_of_india = int(input("Enter the value of population of India: "))
+msg = str(input("Enter the value of message: "))
+print("Num = "+str(num)+"\namt = "+str(amt)+"\npi = "+str(pi)+"\ncode = "+str(code)+"\nPopulation of INDIA = "+str(population_of_india)+"\nMessage = "+str(msg))
+#output:
+#Enter the value of num: 20
+#Enter the value of amt: 140.5
+#Enter the value of pi: 3.14
+#Enter the value of code: DS
+#Enter the value of population of India: 1440000000
+#Enter the value of message: Good
+#  Num = 20
+#  amt = 140.5
+#  pi = 3.14
+#  code = DS
+#  Population of INDIA = 1440000000
+#  Message = Good
+
+
+
+# Write a program to calculate area of a triangle using Heron's formula.
+# Heron's formula: area = sqrt(S*(S-a)*(S-b)*(S-c))
+a = float(input("Enter the first side of triangle: "))
+b = float(input("Enter the second side of triangle: "))
+c = float(input("Enter the third side of triangle: "))
+S = (a+b+c)/2
+area = (S*(S-a)*(S-b)*(S-c))**0.5
+print("Area of the triangle: " + str(area))
+#output:
+#  Area of the triangle: 56.568542494923804
+
+
+
+# Write a program to perform addition, subtraction, multiplication, division (integer division), float division, modulo division on two integer numbers.
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+add = num1 + num2
+sub = num1 - num2
+mul = num1 * num2
+div = num1 / num2 # (/) this produces float output
+idiv = num1 // num2 # (//) this is 'integer division' or 'floor division'
+mdiv = num1 % num2
+print(str(num1) + " + " + str(num2) + " = " + str(add))
+print(str(num1) + " - " + str(num2) + " = " + str(sub))
+print(str(num1) + " * " + str(num2) + " = " + str(mul))
+print(str(num1) + " / " + str(num2) + " = " + str(div) + " (Automatically float output)")
+print(str(num1) + " // " + str(num2) + " = " + str(idiv) + " (Integer output)")
+print(str(num1) + " % " + str(num2) + " = " + str(mdiv))
+#output:
+#Enter number 1: 10
+#Enter number 2: 4
+#  10 + 4 = 14
+#  10 - 4 = 6
+#  10 * 4 = 40
+#  10 / 4 = 2.5 (Automatically float output)
+#  10 // 4 = 2 (Integer output)
+#  10 % 4 = 2
+
+
+
+# Write a program that demonstrates the use of relational operators.
+x = 10
+y = 20
+print(str(x) + " < " + str(y) + " = " + str(x<y))
+print(str(x) + " <= " + str(y) + " = " + str(x<=y)) 
+print(str(x) + " > " + str(y) + " = " + str(x>y)) 
+print(str(x) + " == " + str(y) + " = " + str(x==y))
+print(str(x) + " != " + str(y) + " = " + str(x!=y))
+print(str(x) + " >= " + str(y) + " = " + str(x>=y))
+#output:
+#  10 < 20 = True
+#  10 <= 20 = True
+#  10 > 20 = False
+#  10 == 20 = False
+#  10 != 20 = True
+#  10 >= 20 = False
+
+
+
+# Write a program to calculate a area of a circle.
+radius = float(input("Enter the radius of the circle: "))
+area = 3.14*radius*radius
+circumference = 2*3.14*radius
+print("Area = ", area)
+print("Circumference = ", circumference)
+#output:
+#Enter the radius of the circle: 7
+#  Area =  153.86
+#  Circumference =  43.96
+
+
+
+# Write a program to calculate deviation of two numbers.
+# Deviation of a number = (the number) - (average of all the numbers in the program)
+num1 = int(input("Enter num1: "))
+num2 = int(input("Enter num2: "))
+avg = (num1 + num2)/2
+dev1 = num1 - avg
+dev2 = num2 - avg
+print("Average = ", avg)
+print("Devitation of first num: ", dev1)
+print("Devitation of second num: ", dev2)
+#output:
+#Enter num1: 20
+#Enter num2: 130
+#  Average =  75.0
+#  Devitation of first num:  -55.0
+#  Devitation of second num:  55.0
+
+
+
+# Convert degree fahrenheit to degree celsius.
+fahrenheit = float(input("Enter the temperature in fahrenheit: "))
+celsius  = (0.56)*(fahrenheit-32)
+print("Celsuis = ", celsius)
+print("celsius = "+str(celsius))
+#output:
+#Enter the temperature in fahrenheit: 268.7
+#  Celsuis =  132.552
+#  celsius = 132.552
+
+
+
+# Write a program to calculate the bill amount for an item given its quantity sold, value, discount, and tax.
+qty =  float(input("Enter the quantity of item sold: "))
+val = float(input("Enter  the value of the item: "))
+discount = float(input("Enter the discount percentage: "))
+tax = float(input("Enter the tax percentage: "))
+amt = qty*val
+discount_amt = (amt*discount)/100
+sub_total = amt - discount_amt
+tax_amt = (sub_total*tax)/100
+total_amt = sub_total+tax_amt
+print("*********BILL*********")
+print("Quantity Sold: \t \t", qty)
+print("Price per item: \t", val)
+print("\n \t ----------------------")
+print("Amount: \t \t", amt)
+print("Discount: \t \t", discount_amt)
+print("\n \t ----------------------")
+print("Discounted Total: \t", sub_total)
+print("Tax: \t \t \t", tax_amt)
+print("\n \t ----------------------")
+print("Total amonut to be paid: ", total_amt)
+#output:
+#Enter the quantity of item sold: 78
+#Enter  the value of the item: 100
+#Enter the discount percentage: 16
+#Enter the tax percentage: 9
+#  *********BILL*********
+#  Quantity Sold: 	 	 78.0
+#  Price per item: 	 100.0
+#
+#   	 ----------------------
+#  Amount: 	 	 7800.0
+#  Discount: 	 	 1248.0
+#
+#   	 ----------------------
+#  Discounted Total: 	 6552.0
+#  Tax: 	 	 	 589.68
+#
+#  	 ----------------------
+#  Total amonut to be paid:  7141.68
+
+
+
+# Write a program to convert a floating point number into the corresponding integer.
+a = float(input("Enter any floating point number = "))
+print("The integer variant of " + str(a) + " = " + str(int(a)))
+print("The integer variant is: ", str(int(a)))
+#output:
+#Enter any floating point number = 5233.8
+#  The integer variant of 5233.8 = 5233
+#  The integer variant is:  5233
+
+
+
+# Write a program to convert a integer number into the corresponding floating point number.
+a = int(input("Enter any floating point number = "))
+print("The integer variant of " + str(a) + " = " + str(float(a)))
+print("The integer variant is: ", str(float(a)))
+#output:
+#Enter any floating point number = 134
+#  The integer variant of 134 = 134.0
+#  The integer variant is:  134.0
+
+
+
+# Write a program that calculates a the number of seconds in a day.
+sec = 1*24*60*60
+print("The number of seconds in a day is: ", sec)
+#output:
+#  The number of seconds in a day is:  86400
+
+
+
+# Write a program to calculate simple interest and compound interest.
+a = input("Enter the principal amount: ")
+r = input("Enter the annual interest rate as percentage: ")
+t = input("Enter the time period in years: ")
+sim_int = (a*r*t)/100
+com_int = a*(1+r/100)**t - a
+print("Simple interest: ", sim_int)
+print("Compound interest: ", com_int)
+#output:
+#Enter the principal amount: 30000
+#Enter the annual interest rate as percentage: 5
+#Enter the time period in years: 4
+#  Simple interest:  6000.0
+#  Compound interest:  6465.187500000007
+
